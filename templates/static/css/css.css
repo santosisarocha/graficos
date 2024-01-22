@@ -1,0 +1,201 @@
+body{
+  background-color: white;
+  color: white;
+}
+
+/* Adicione ao seu arquivo CSS ou insira diretamente no bloco de estilos da página */
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family: 'Blinker', sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  background: rgb(242,101,110);
+  padding-inline: 16px;
+}
+
+.nav {
+  max-width: 1280px;
+  height: 115px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-list {
+  justify-content: space-between;
+  display: flex;
+  gap: 90px;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-list a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out; /* Adiciona transição para a largura */
+}
+
+.nav-list a:hover::before {
+  width: 100%; /* Expande o underline ao passar o mouse sobre o link */
+}
+
+
+.hero {
+  height: calc(100vh - 70px);
+  background-color: white;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+@media (max-width: 750px) {
+  .hamburger {
+    display: block;
+    z-index: 1;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(242,101,110);
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  /* Estilos ativos */
+
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+
+#footer {
+  background-color: #000000; /* Cor de fundo do rodapé */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto ao centro */
+}
+
+.bloco_texto_um,
+.bloco_texto_dois {
+  display: block;
+  margin-bottom: 10px; /* Espaçamento entre os blocos de texto */
+}
+
+a {
+  color: #B9B6B6;
+font-family: Blinker;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+a:hover {
+  color: rgb(242,101,110); /* Cor do link quando passa o mouse sobre ele */
+}
+
+@media screen and (max-width: 768px) {
+  .bloco_texto_um,
+  .bloco_texto_dois {
+    display: inline-block;
+    margin: 0 10px; /* Espaçamento entre os blocos de texto */
+  }
+  a {font-size: 10px;}
+}

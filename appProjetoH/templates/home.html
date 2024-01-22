@@ -1,0 +1,80 @@
+
+
+{% extends 'base.html' %}
+{% load static%}
+
+
+{% load static %}
+
+{% block 'titulo' %}Dashboard{% endblock %}
+
+<link rel="stylesheet" href="{%static 'css/css.css'%}">
+
+{% block 'head' %}
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+
+
+{% endblock %}
+
+{% block 'body' %}
+<header class="header">
+  <nav class="nav">
+    <div class="logo">
+      <img src="image/logo.svg" height="90" width="130">
+    </div>
+    <button class="hamburger"></button>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Filas</a></li>
+      <li><a href="#">Gráficos Mensais</a></li>
+      <li><a href="about_us.html">Sobre Nós</a></li>
+      <li><a href="#">Entretenimento</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="container1" >
+  <br>
+  <br>
+
+<canvas id="despesas_mensal" width="30" height="10"></canvas>
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+<div class="container2">
+
+<canvas id="quantidade_de_pessoas" width="200" height="20"></canvas>
+
+</div>
+<br>
+<br>
+<div class="container3">
+
+  <canvas id="movimentacao_pessoas"></canvas>
+
+</div>
+<footer id="footer">
+  <p class="bloco_texto_um">
+    <a href="index.html">Home</a><br>
+    <a href="filas.html">Filas</a><br>
+    <a href="graficos.html">Gráficos Mensais</a>
+  </p>
+  <p class="bloco_texto_dois">
+    <a href="ajuda.html">Ajuda</a><br>
+    <a href="sobre.html">Sobre nós</a>
+  </p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+<script src="{% static 'js/js.js' %}"></script>
+<script src="{% static 'css/css.css' %}"></script>
+
+
+
+
+{% endblock %}

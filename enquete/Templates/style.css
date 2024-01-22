@@ -1,0 +1,55 @@
+body {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.divisor {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha em telas menores */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+}
+
+#btnEnvia {
+    background-color: #f2656e;
+    border: 1px solid #f2656e;
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+    max-width: 500px; /* Limita a largura máxima para 500px */
+    box-sizing: border-box; /* Inclui a largura da borda e do preenchimento na largura total */
+}
+
+.card {
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+    max-width: 500px; /* Limita a largura máxima para 500px */
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.form-check-input:checked {
+    background-color: #f2656e;
+}
+
+.card-title {
+    font-weight: 100;
+}
+
+.card-header {
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+#bemVida_bar, #grill_bar, #modaCasa_bar, #receitaChefe_bar {
+    background-color: #f2656e;
+}
+
+/* Adicionar media queries para tamanhos de tela específicos */
+@media only screen and (min-width: 768px) {
+    .divisor {
+        justify-content: space-between; /* Espaçamento uniforme entre os elementos */
+    }
+
+    .card {
+        margin-right: 10px;
+    }
+}
